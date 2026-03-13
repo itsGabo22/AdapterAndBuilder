@@ -1,4 +1,6 @@
-package smarthome;
+package smarthome.Luz;
+
+import smarthome.ID.IDispositivo;
 
 // Rol: ConcreteImplementor del patrón Bridge
 // Implementación concreta de un dispositivo: una luz inteligente.
@@ -47,4 +49,3 @@ public class LuzInteligente implements IDispositivo {
         return "Luz Inteligente";
     }
 }
-

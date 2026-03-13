@@ -1,4 +1,6 @@
-package smarthome;
+package smarthome.Aire_Moderno_Acondicionado;
+
+import smarthome.ID.IDispositivo;
 
 // Rol: ConcreteImplementor del patrón Bridge
 // Aire acondicionado moderno que ya cumple con la interfaz IDispositivo.
@@ -47,4 +49,3 @@ public class ModernAirConditioner implements IDispositivo {
         return "Aire Acondicionado Moderno";
     }
 }
-

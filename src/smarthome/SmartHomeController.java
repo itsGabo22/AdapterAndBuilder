@@ -4,6 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
+import smarthome.Adapter.OldDeviceAdapter;
+import smarthome.Aire_Acondicionado.LegacyAirConditioner;
+import smarthome.Aire_Moderno_Acondicionado.ModernAirConditioner;
+import smarthome.Control_Remoto.ControlRemoto;
+import smarthome.Control_Remoto.ControlRemotoBasico;
+import smarthome.ID.IDispositivo;
+import smarthome.Luz.LuzInteligente;
 
 // Rol: Client de los patrones Bridge y Adapter desde la GUI.
 // Trabaja con ControlRemoto (Abstraction) e IDispositivo (Implementor/adaptado).
@@ -35,8 +42,7 @@ public class SmartHomeController {
                 "Luz Inteligente",
                 "Smart TV",
                 "Aire Acondicionado Moderno",
-                "Aire Acondicionado Legado (Adapter)"
-        );
+                "Aire Acondicionado Legado (Adapter)");
         comboDispositivo.getSelectionModel().selectFirst();
         crearControlRemotoParaSeleccion();
         log("Sistema iniciado. Dispositivo actual: " + controlRemotoActual.getNombreDispositivo());
@@ -50,33 +56,38 @@ public class SmartHomeController {
 
     @FXML
     private void onEncender() {
-        if (controlRemotoActual == null) return;
+        if (controlRemotoActual == null)
+            return;
         String r = controlRemotoActual.encender();
         log(r);
     }
 
     @FXML
     private void onApagar() {
-        if (controlRemotoActual == null) return;
+        if (controlRemotoActual == null)
+            return;
         String r = controlRemotoActual.apagar();
         log(r);
     }
 
     @FXML
     private void onSubirNivel() {
-        if (controlRemotoActual == null) return;
+        if (controlRemotoActual == null)
+            return;
         String r = controlRemotoActual.subirNivel();
         log(r);
     }
 
     @FXML
     private void onBajarNivel() {
-        if (controlRemotoActual == null) return;
+        if (controlRemotoActual == null)
+            return;
         String r = controlRemotoActual.bajarNivel();
         log(r);
     }
 
-    // Crea el ControlRemoto (Abstraction) inyectando la implementación adecuada (IDispositivo).
+    // Crea el ControlRemoto (Abstraction) inyectando la implementación adecuada
+    // (IDispositivo).
     private void crearControlRemotoParaSeleccion() {
         String seleccion = comboDispositivo.getSelectionModel().getSelectedItem();
         IDispositivo dispositivo;
@@ -104,4 +115,3 @@ public class SmartHomeController {
         txtLog.appendText(mensaje + "\n");
     }
 }
-

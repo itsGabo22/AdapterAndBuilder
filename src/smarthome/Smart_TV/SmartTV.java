@@ -1,5 +1,7 @@
 package smarthome;
 
+import smarthome.ID.IDispositivo;
+
 // Rol: ConcreteImplementor del patrón Bridge
 // Otra implementación de dispositivo: una TV inteligente.
 public class SmartTV implements IDispositivo {
@@ -47,4 +49,3 @@ public class SmartTV implements IDispositivo {
         return "Smart TV";
     }
 }
-

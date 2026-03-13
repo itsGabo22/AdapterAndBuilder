@@ -1,4 +1,6 @@
-package smarthome;
+package smarthome.Control_Remoto;
+
+import smarthome.ID.IDispositivo;
 
 // Rol: RefinedAbstraction del patrón Bridge
 // Implementa un control remoto sencillo que delega en el IDispositivo.
@@ -28,4 +30,3 @@ public class ControlRemotoBasico extends ControlRemoto {
         return "[ControlRemotoBasico] " + dispositivo.bajarNivel();
     }
 }
-

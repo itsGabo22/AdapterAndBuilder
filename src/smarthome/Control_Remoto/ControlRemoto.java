@@ -1,4 +1,6 @@
-package smarthome;
+package smarthome.Control_Remoto;
+
+import smarthome.ID.IDispositivo;
 
 // Rol: Abstraction del patrón Bridge
 // Representa un control remoto genérico que trabaja con un IDispositivo.
@@ -22,4 +24,3 @@ public abstract class ControlRemoto {
         return dispositivo != null ? dispositivo.getNombre() : "Ningún dispositivo";
     }
 }
-

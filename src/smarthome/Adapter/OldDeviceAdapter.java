@@ -1,4 +1,7 @@
-package smarthome;
+package smarthome.Adapter;
+
+import smarthome.Aire_Acondicionado.LegacyAirConditioner;
+import smarthome.ID.IDispositivo;
 
 // Rol: Adapter (Patrón Adapter)
 // Implementa IDispositivo (del Bridge) pero delega en un LegacyAirConditioner,
@@ -40,4 +43,3 @@ public class OldDeviceAdapter implements IDispositivo {
         return legacy.getLegacyName() + " (Adaptado)";
     }
 }
-

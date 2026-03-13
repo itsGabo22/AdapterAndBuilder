@@ -1,4 +1,4 @@
-package smarthome;
+package smarthome.Aire_Acondicionado;
 
 // Rol: Clase legada/incompatible.
 // Imagina que viene de una librería externa que no podemos cambiar.
@@ -42,4 +42,3 @@ public class LegacyAirConditioner {
         return "Legacy Air Conditioner";
     }
 }
-
