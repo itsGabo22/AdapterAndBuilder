@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="smarthome.SmartHomeController"
+            xmlns:fx="http://javafx.com/fxml" prefWidth="820.0" prefHeight="480.0"
+            styleClass="root-pane">
+
+    <top>
+        <VBox spacing="12.0">
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+            </padding>
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Neon Home Control"
+                               styleClass="app-title"/>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Dispositivo:"
+                               styleClass="field-label"/>
+                        <ComboBox fx:id="comboDispositivo"
+                                  onAction="#onSeleccionarDispositivo"
+                                  prefWidth="320.0"
+                                  styleClass="device-combo"/>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Button fx:id="btnEncender" text="Encender"
+                                onAction="#onEncender" prefWidth="110.0"
+                                styleClass="primary-button"/>
+                        <Button fx:id="btnApagar" text="Apagar"
+                                onAction="#onApagar" prefWidth="110.0"
+                                styleClass="secondary-button"/>
+                        <Button fx:id="btnSubir" text="Subir Nivel"
+                                onAction="#onSubirNivel" prefWidth="120.0"
+                                styleClass="accent-button"/>
+                        <Button fx:id="btnBajar" text="Bajar Nivel"
+                                onAction="#onBajarNivel" prefWidth="120.0"
+                                styleClass="accent-button"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="8.0">
+            <padding>
+                <Insets top="0.0" right="10.0" bottom="10.0" left="10.0"/>
+            </padding>
+            <children>
+                <Label text="Monitor de eventos"
+                       styleClass="section-title"/>
+                <TextArea fx:id="txtLog" editable="false" wrapText="true"
+                          BorderPane.alignment="CENTER"
+                          styleClass="log-area"/>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>
+

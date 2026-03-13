@@ -1,0 +1,74 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #0f172a, #020617);
+}
+
+.app-title {
+    -fx-text-fill: #38bdf8;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.section-title {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+.field-label {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 13px;
+}
+
+.device-combo {
+    -fx-background-color: #020617;
+    -fx-border-color: #38bdf8;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: #e5e7eb;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #22c55e, #16a34a);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.secondary-button {
+    -fx-background-color: #1f2937;
+    -fx-text-fill: #e5e7eb;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.accent-button {
+    -fx-background-color: linear-gradient(to right, #38bdf8, #0ea5e9);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.accent-button:hover {
+    -fx-opacity: 0.9;
+}
+
+.primary-button:pressed,
+.secondary-button:pressed,
+.accent-button:pressed {
+    -fx-opacity: 0.8;
+}
+
+.log-area {
+    -fx-control-inner-background: #020617;
+    -fx-text-fill: #e5e7eb;
+    -fx-font-family: "Consolas", "Cascadia Code", monospace;
+    -fx-font-size: 12px;
+    -fx-border-color: #1f2937;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
